@@ -24,17 +24,15 @@
       <p class="text-center lead mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
       <h2 class="text-center mb-4">Job Opportunities</h2>
-    
-    <div>
-        {% for place in places %}
-      <div>
-      <div><h4>{{place['title']}}</h4></div>
-      <div><b> Location:</b>{{place['location']}}</div>
-      <div><b>Salary:</b><{{place['salary']}}</div>
-      </div>  
-        {% end for %}
-   </div>
 
+   
+    <div>
+          {% for place in places %}
+            {% include 'jobitem.html' %}
+          {% endfor %}
+     </div>
+
+    
     
     <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact Us</button>
