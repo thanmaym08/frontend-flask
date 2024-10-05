@@ -14,19 +14,33 @@
     </style>
    
   </head>
-  <div class="container">
   <body>
+  <div class="container">
+
       <h1 class="text-center mt-2 mb-4">Wildlife Photography</h1>
     
       <img  class="img-fluid" id="banner" src="https://a170f9ed-9b3d-498d-b83e-417fee56b71d-00-p3uc3l7zujsh.pike.replit.dev/static/desert.jpg" alt="wildlife pic" height="320">
       <h2 class="text-center mt-2 mb-4">About Wildlife Photography</h2>
       <p class="text-center lead mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-      <h2 class="text-center mb-4">Show the places to visit here</h2>
+      <h2 class="text-center mb-4">Job Opportunities</h2>
+    
+    <div>
+        {% for place in places %}
+      <div>
+      <div><h4>{{place['title']}}</h4></div>
+      <div><b> Location:</b>{{place['location']}}</div>
+      <div><b>Salary:</b><{{place['salary']}}</div>
+      </div>  
+        {% end for %}
+   </div>
+
+    
     <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact Us</button>
       <p>Copyright 2024,Wildlife Photography</p>
     </div>
-        </div>
+       </div>
   </body>
+     
 </html>
